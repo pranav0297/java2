@@ -1,11 +1,10 @@
-// class Customer
 class Customer{
 
     String Customer_name;
     int Customer_Mno;
 
-    public void Wait(){
-        System.out.println("your order in a queue, please wait");
+    public void Wait(int n ){
+        System.out.println("your order in a queue, please wait and order number is : "+n);
     }
 
     public void collect(){
@@ -20,8 +19,8 @@ class Cashier{
     int recieved_amount(){
         System.out.println("recieved_amount and genrate token ");
 
-        customer.wait();
-        return token;
+       return  customer.wait(token);
+        
     }
 
     void waiting_queue(int token){
@@ -51,4 +50,3 @@ class Barista{
     }
 
 }
-
