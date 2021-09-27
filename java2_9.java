@@ -6,17 +6,14 @@ abstract class Furniture{
 
 class Wooden extends Furniture{
     String stress(int n){
-        String s = "ok";
-        String s1 ="Not";
+
         if(n>=50)
-            return fire(s);
+            return fire("1");
         else
-            return fire(s1);
+            return fire("0");
     }
     String fire(String Argument) {
-        String s = "ok";
-        String s1 = "Not";
-        if (Argument == s){
+        if (Argument == "1"){
             System.out.println("Wooden chair is safe from fire");
         return "0";
     }
@@ -30,19 +27,17 @@ class Wooden extends Furniture{
 
 class Metal extends Furniture{
     String stress(int n){
-        String s = "ok";
-        String s1 ="Not";
+
 
         if(n>=40)
-            return fire(s);
+            return fire("1");
 
         else
-            return fire(s1);
+            return fire("0");
     }
     String fire(String Argument){
-        String s = "ok";
-        String s1 ="Not";
-        if(Argument==s) {
+
+        if(Argument=="1") {
             System.out.println("Metal chair is safe from fire");
             return "0";
         }
@@ -53,8 +48,7 @@ class Metal extends Furniture{
         }
     }
 }
-public class java2_9
-{
+public class java2_9 {
     public static void main (String[] args) {
         Wooden chair1 = new Wooden();
         Wooden table1 = new Wooden();
@@ -66,6 +60,6 @@ public class java2_9
         Metal table2 = new Metal();
         chair2.stress(40);
         table2.stress(30);
-        
+
     }
 }
